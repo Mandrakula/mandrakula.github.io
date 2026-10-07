@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mandrakula — O feitiço começa quando você dá play</title>
+		<meta
+			name="description"
+			content="Mandrakula é uma cantora em construção de identidade. Covers reinterpretados, estética cinematográfica, emoção crua, trap sujo, magia e desejo."
+		/>
+		<meta
+			name="keywords"
+			content="Mandrakula, cantora Mandrakula, trap, música, covers, artista independente, trap sujo, magia, desejo"
+		/>
+		<meta name="author" content="Mandrakula" />
+		<meta name="robots" content="index, follow" />
+		<meta
+			property="og:title"
+			content="Mandrakula — O feitiço começa quando você dá play"
+		/>
+		<meta
+			property="og:description"
+			content="Nova fase. Nova energia. Covers reinterpretados com estética cinematográfica e emoção crua."
+		/>
+		<meta property="og:type" content="profile" />
+		<meta
+			property="og:url"
+			content="https://www.instagram.com/_mandrakula_/"
+		/>
+		<link rel="canonical" href="https://www.instagram.com/_mandrakula_/" />
+		<!-- FONTES -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&family=UnifrakturCook:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- DADOS ESTRUTURADOS -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Mandrakula",
+				"jobTitle": "Cantora",
+				"description": "Cantora em construção de identidade, com covers reinterpretados em estética cinematográfica e emoção crua.",
+				"sameAs": [
+					"https://www.instagram.com/_mandrakula_/",
+					"https://www.youtube.com/channel/UCu354uM_h3xg7lIr7ssnedg"
+				]
+			}
+		</script>
+		<style>
+			/* =====================================================
+           RESET
+        ===================================================== */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html {
+				scroll-behavior: smooth;
+				background: #050505;
+			}
+			body {
+				background: #050505;
+				color: #f0eee9;
+				font-family: "Inter", sans-serif;
+				overflow-x: hidden;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			button {
+				font-family: inherit;
+			}
+			/* =====================================================
+           VARIÁVEIS
+        ===================================================== */
+			:root {
+				--black: #050505;
+				--black-2: #090909;
+				--black-3: #101010;
+				--white: #f0eee9;
+				--gray: #999;
+				--gray-dark: #555;
+				--red: #8e0018;
+				--red-light: #c40024;
+				--line: rgba(255, 255, 255, 0.12);
+			}
+			/* =====================================================
+           TEXTURA
+        ===================================================== */
+			body::before {
+				content: "";
+				position: fixed;
+				inset: 0;
+				pointer-events: none;
+				z-index: 9999;
+				opacity: 0.035;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+			}
+			/* =====================================================
+           HEADER
+        ===================================================== */
+			header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 80px;
+				padding: 0 7vw;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				z-index: 1000;
+				transition: 0.35s ease;
+			}
+			header.scrolled {
+				background: rgba(5, 5, 5, 0.92);
+				backdrop-filter: blur(16px);
+				border-bottom: 1px solid var(--line);
+			}
+			.logo {
+				font-family: "Cinzel", serif;
+				font-size: 1.2rem;
+				letter-spacing: 0.3em;
+				text-transform: uppercase;
+			}
+			.logo span {
+				color: var(--red-light);
+			}
+			nav {
+				display: flex;
+				gap: 35px;
+			}
+			nav a {
+				color: #888;
+				font-family: "DM Mono", monospace;
+				font-size: 0.62rem;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				transition: 0.25s;
+			}
+			nav a:hover {
+				color: white;
+			}
+			.menu {
+				display: none;
+				width: 42px;
+				height: 42px;
+				border: 1px solid var(--line);
+				background: transparent;
+				color: white;
+				cursor: pointer;
+			}
+			/* =====================================================
+           HERO
+        ===================================================== */
+			.hero {
+				min-height: 100vh;
+				padding: 150px 8vw 100px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+			}
+			.hero::before {
+				content: "";
+				position: absolute;
+				width: 700px;
+				height: 700px;
+				border-radius: 50%;
+				right: -350px;
+				top: 50%;
+				transform: translateY(-50%);
+				border: 1px solid rgba(196, 0, 36, 0.15);
+				box-shadow: 0 0 0 100px rgba(196, 0, 36, 0.025),
+					0 0 0 200px rgba(196, 0, 36, 0.015),
+					0 0 0 300px rgba(196, 0, 36, 0.01);
+			}
+			.hero::after {
+				content: "✦";
+				position: absolute;
+				right: 8vw;
+				top: 30%;
+				color: var(--red-light);
+				font-size: 1.8rem;
+			}
+			.hero-content {
+				position: relative;
+				z-index: 2;
+				max-width: 1100px;
+			}
+			.eyebrow {
+				display: flex;
+				align-items: center;
+				gap: 14px;
+				margin-bottom: 28px;
+				font-family: "DM Mono", monospace;
+				color: #888;
+				font-size: 0.65rem;
+				letter-spacing: 0.3em;
+				text-transform: uppercase;
+			}
+			.eyebrow::before {
+				content: "";
+				width: 42px;
+				height: 1px;
+				background: var(--red-light);
+			}
+			.hero h1 {
+				font-family: "Cinzel", serif;
+				font-size: clamp(4.5rem, 13vw, 12rem);
+				font-weight: 400;
+				line-height: 0.8;
+				letter-spacing: -0.06em;
+				text-transform: uppercase;
+			}
+			.hero h1 span {
+				display: block;
+				color: transparent;
+				-webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+			}
+			.hero-subtitle {
+				margin-top: 45px;
+				max-width: 600px;
+				color: #aaa;
+				font-size: 1rem;
+				line-height: 1.9;
+			}
+			.hero-subtitle strong {
+				color: white;
+				font-weight: 500;
+			}
+			.hero-actions {
+				display: flex;
+				gap: 14px;
+				margin-top: 40px;
+			}
+			.button {
+				min-height: 50px;
+				padding: 0 28px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid var(--line);
+				font-family: "DM Mono", monospace;
+				font-size: 0.62rem;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				transition: 0.3s;
+			}
+			.button.primary {
+				background: var(--red);
+				border-color: var(--red);
+			}
+			.button:hover {
+				transform: translateY(-3px);
+				border-color: white;
+			}
+			.button.primary:hover {
+				background: var(--red-light);
+				border-color: var(--red-light);
+			}
+			.hero-side {
+				position: absolute;
+				right: 7vw;
+				bottom: 10vh;
+				writing-mode: vertical-rl;
+				color: #555;
+				font-family: "DM Mono", monospace;
+				font-size: 0.58rem;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+			}
+			/* =====================================================
+           DIVISOR
+        ===================================================== */
+			.divider {
+				height: 1px;
+				background: var(--line);
+				position: relative;
+			}
+			.divider::after {
+				content: "✦";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				padding: 0 15px;
+				background: var(--black);
+				color: var(--red-light);
+			}
+			/* =====================================================
+           SEÇÕES
+        ===================================================== */
+			section {
+				padding: 130px 8vw;
+			}
+			.label {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				margin-bottom: 22px;
+				color: var(--red-light);
+				font-family: "DM Mono", monospace;
+				font-size: 0.62rem;
+				letter-spacing: 0.3em;
+				text-transform: uppercase;
+			}
+			.label::before {
+				content: "✦";
+			}
+			.title {
+				font-family: "Cinzel", serif;
+				font-size: clamp(2.8rem, 6vw, 6rem);
+				font-weight: 400;
+				line-height: 0.95;
+				text-transform: uppercase;
+			}
+			/* =====================================================
+           IDENTIDADE
+        ===================================================== */
+			.identity {
+				background: var(--black-2);
+			}
+			.identity-grid {
+				display: grid;
+				grid-template-columns: 0.8fr 1.2fr;
+				gap: 10vw;
+			}
+			.identity-number {
+				font-family: "UnifrakturCook", cursive;
+				font-size: clamp(6rem, 13vw, 13rem);
+				color: var(--red);
+				line-height: 0.7;
+				opacity: 0.8;
+			}
+			.identity-text p {
+				max-width: 700px;
+				margin-top: 35px;
+				color: #aaa;
+				font-size: 1rem;
+				line-height: 2;
+			}
+			.identity-text strong {
+				color: white;
+				font-weight: 500;
+			}
+			.identity-phrase {
+				margin-top: 50px;
+				padding: 25px 0 25px 30px;
+				border-left: 1px solid var(--red-light);
+				font-family: "Cinzel", serif;
+				font-size: clamp(1.5rem, 3vw, 2.8rem);
+				line-height: 1.3;
+				text-transform: uppercase;
+			}
+			/* =====================================================
+           UNIVERSO
+        ===================================================== */
+			.universe {
+				text-align: center;
+			}
+			.universe-intro {
+				max-width: 650px;
+				margin: 35px auto 70px;
+				color: #888;
+				line-height: 1.9;
+			}
+			.universe-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1px;
+				background: var(--line);
+				border: 1px solid var(--line);
+			}
+			.universe-card {
+				min-height: 300px;
+				padding: 45px 35px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				text-align: left;
+				background: var(--black);
+				transition: 0.35s;
+			}
+			.universe-card:hover {
+				background: var(--black-3);
+			}
+			.card-symbol {
+				font-family: "Cinzel", serif;
+				color: var(--red-light);
+				font-size: 2rem;
+			}
+			.universe-card h3 {
+				font-family: "Cinzel", serif;
+				font-weight: 400;
+				font-size: 2rem;
+				text-transform: uppercase;
+			}
+			.universe-card p {
+				margin-top: 15px;
+				color: #777;
+				font-size: 0.85rem;
+				line-height: 1.8;
+			}
+			/* =====================================================
+           COVERS
+        ===================================================== */
+			.covers {
+				background: var(--black-2);
+				border-top: 1px solid var(--line);
+				border-bottom: 1px solid var(--line);
+			}
+			.covers-content {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 10vw;
+			}
+			.covers-description {
+				color: #999;
+				font-size: 1rem;
+				line-height: 2;
+			}
+			.covers-description strong {
+				color: white;
+			}
+			.cover-list {
+				margin-top: 45px;
+				border-top: 1px solid var(--line);
+			}
+			.cover-item {
+				min-height: 90px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-bottom: 1px solid var(--line);
+			}
+			.cover-item span:first-child {
+				color: #555;
+				font-family: "DM Mono", monospace;
+				font-size: 0.65rem;
+			}
+			.cover-item span:nth-child(2) {
+				font-family: "Cinzel", serif;
+				font-size: 1rem;
+				text-transform: uppercase;
+			}
+			.cover-arrow {
+				color: var(--red-light);
+				transition: 0.3s;
+			}
+			.cover-item:hover .cover-arrow {
+				transform: translateX(7px);
+			}
+			/* =====================================================
+           MANIFESTO
+        ===================================================== */
+			.manifesto {
+				min-height: 600px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+			}
+			.manifesto::before {
+				content: "";
+				position: absolute;
+				width: 550px;
+				height: 550px;
+				border-radius: 50%;
+				border: 1px solid rgba(196, 0, 36, 0.15);
+			}
+			.manifesto::after {
+				content: "";
+				position: absolute;
+				width: 350px;
+				height: 350px;
+				border-radius: 50%;
+				border: 1px solid rgba(196, 0, 36, 0.2);
+			}
+			.manifesto-content {
+				position: relative;
+				z-index: 2;
+				max-width: 900px;
+			}
+			.manifesto-small {
+				margin-bottom: 25px;
+				color: var(--red-light);
+				font-family: "DM Mono", monospace;
+				font-size: 0.65rem;
+				letter-spacing: 0.3em;
+				text-transform: uppercase;
+			}
+			.manifesto h2 {
+				font-family: "Cinzel", serif;
+				font-size: clamp(2.5rem, 6vw, 6rem);
+				font-weight: 400;
+				line-height: 1.05;
+				text-transform: uppercase;
+			}
+			.manifesto h2 span {
+				color: var(--red-light);
+			}
+			/* =====================================================
+           ERA
+        ===================================================== */
+			.era {
+				background: var(--black-2);
+			}
+			.era-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 10vw;
+			}
+			.era-copy {
+				color: #999;
+				line-height: 2;
+			}
+			.era-copy p + p {
+				margin-top: 25px;
+			}
+			.era-list {
+				margin-top: 45px;
+			}
+			.era-line {
+				display: flex;
+				gap: 25px;
+				padding: 18px 0;
+				border-bottom: 1px solid var(--line);
+				font-family: "DM Mono", monospace;
+				font-size: 0.7rem;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+			}
+			.era-line span:first-child {
+				color: var(--red-light);
+			}
+			.era-line span:last-child {
+				color: #888;
+			}
+			/* =====================================================
+           SOCIAL
+        ===================================================== */
+			.social {
+				text-align: center;
+				padding-bottom: 150px;
+			}
+			.social-description {
+				max-width: 550px;
+				margin: 30px auto 45px;
+				color: #777;
+				line-height: 1.8;
+			}
+			.social-buttons {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+			}
+			/* =====================================================
+           FOOTER
+        ===================================================== */
+			footer {
+				padding: 35px 8vw;
+				border-top: 1px solid var(--line);
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				color: #555;
+				font-family: "DM Mono", monospace;
+				font-size: 0.58rem;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+			}
+			footer strong {
+				color: #ddd;
+				font-family: "Cinzel", serif;
+				font-weight: 400;
+				letter-spacing: 0.25em;
+			}
+			footer span {
+				color: var(--red-light);
+			}
+			/* =====================================================
+           ANIMAÇÃO
+        ===================================================== */
+			.reveal {
+				opacity: 0;
+				transform: translateY(30px);
+				transition: opacity 0.8s ease, transform 0.8s ease;
+			}
+			.reveal.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			/* =====================================================
+           RESPONSIVO
+        ===================================================== */
+			@media (max-width: 850px) {
+				header {
+					padding: 0 6vw;
+				}
+				.menu {
+					display: block;
+				}
+				nav {
+					display: none;
+					position: fixed;
+					top: 80px;
+					left: 0;
+					width: 100%;
+					padding: 35px 6vw;
+					flex-direction: column;
+					gap: 25px;
+					background: rgba(5, 5, 5, 0.98);
+					border-bottom: 1px solid var(--line);
+				}
+				nav.active {
+					display: flex;
+				}
+				.hero {
+					padding-left: 7vw;
+					padding-right: 7vw;
+				}
+				.hero-side {
+					display: none;
+				}
+				.identity-grid,
+				.covers-content,
+				.era-grid {
+					grid-template-columns: 1fr;
+					gap: 60px;
+				}
+				.identity-number {
+					font-size: 7rem;
+				}
+				.universe-grid {
+					grid-template-columns: 1fr;
+				}
+				section {
+					padding: 100px 7vw;
+				}
+			}
+			@media (max-width: 550px) {
+				header {
+					height: 70px;
+				}
+				nav {
+					top: 70px;
+				}
+				.hero {
+					min-height: 100svh;
+					padding-top: 120px;
+				}
+				.hero h1 {
+					font-size: clamp(3.7rem, 18vw, 6rem);
+				}
+				.hero-actions {
+					flex-direction: column;
+				}
+				.button {
+					width: 100%;
+				}
+				section {
+					padding: 80px 6vw;
+				}
+				.manifesto {
+					min-height: 480px;
+				}
+				.manifesto::before {
+					width: 350px;
+					height: 350px;
+				}
+				.manifesto::after {
+					width: 220px;
+					height: 220px;
+				}
+				.social-buttons {
+					flex-direction: column;
+				}
+				footer {
+					flex-direction: column;
+					gap: 15px;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- =====================================================
+         HEADER
+    ====================================================== -->
+		<header id="header">
+			<a href="#inicio" class="logo"> MANDRA<span>KULA</span> </a>
+			<button
+				class="menu"
+				id="menu"
+				aria-label="Abrir menu"
+				aria-expanded="false"
+			>
+				☰
+			</button>
+			<nav id="nav">
+				<a href="#sobre"> Sobre </a>
+				<a href="#universo"> Universo </a>
+				<a href="#covers"> Covers </a>
+				<a href="#era"> A Era </a>
+				<a href="#redes"> Redes </a>
+			</nav>
+		</header>
+		<main>
+			<!-- =================================================
+             HERO
+        ================================================== -->
+			<section class="hero" id="inicio">
+				<div class="hero-content">
+					<div class="eyebrow">Cantora · Nova fase</div>
+					<h1>
+						Mandra
+						<span> kula </span>
+					</h1>
+					<p class="hero-subtitle">
+						<strong> Cantora em construção de identidade. </strong>
+						<br /><br />
+						Covers reinterpretados com estética cinematográfica e
+						emoção crua.
+						<br /><br />
+						Uma nova fase começa a tomar forma. Uma nova energia
+						encontra sua voz.
+					</p>
+					<div class="hero-actions">
+						<a
+							href="https://www.youtube.com/channel/UCu354uM_h3xg7lIr7ssnedg"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="button primary"
+						>
+							Ouvir no YouTube
+						</a>
+						<a
+							href="https://www.instagram.com/_mandrakula_/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="button"
+						>
+							Instagram
+						</a>
+					</div>
+				</div>
+				<div class="hero-side">
+					Nova fase · Nova energia · Bem-vindo à era
+				</div>
+			</section>
+			<div class="divider"></div>
+			<!-- =================================================
+             SOBRE
+        ================================================== -->
+			<section class="identity reveal" id="sobre">
+				<div class="identity-grid">
+					<div>
+						<div class="label">01 · Identidade</div>
+						<div class="identity-number">M</div>
+					</div>
+					<div class="identity-text">
+						<h2 class="title">
+							Uma voz<br />
+							em construção.
+						</h2>
+						<p>
+							<strong>Mandrakula</strong> nasce de uma vontade de
+							transformar interpretação em identidade.
+							<br /><br />
+							A proposta não é simplesmente cantar músicas que já
+							existem. É atravessá-las por outra atmosfera, outra
+							intenção e outra emoção.
+							<br /><br />
+							Cada cover se torna uma possibilidade de
+							experimentar uma versão diferente de si mesma.
+						</p>
+						<div class="identity-phrase">
+							Nova fase.<br />
+							Nova energia.<br />
+							Nova voz.
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- =================================================
+             UNIVERSO
+        ================================================== -->
+			<section class="universe reveal" id="universo">
+				<div class="label">02 · Universo</div>
+				<h2 class="title">
+					Trap.<br />
+					Magia.<br />
+					Desejo.
+				</h2>
+				<p class="universe-intro">
+					Três palavras ajudam a abrir a porta para o universo de
+					Mandrakula. Não como rótulos definitivos, mas como
+					sensações.
+				</p>
+				<div class="universe-grid">
+					<article class="universe-card">
+						<div class="card-symbol">01</div>
+						<div>
+							<h3>Trap</h3>
+							<p>
+								Uma estética mais crua, intensa e visceral.
+								Música que não precisa pedir licença para
+								existir.
+							</p>
+						</div>
+					</article>
+					<article class="universe-card">
+						<div class="card-symbol">02</div>
+						<div>
+							<h3>Magia</h3>
+							<p>
+								O imaginário, o mistério, o ritual e aquilo que
+								não precisa ser explicado.
+							</p>
+						</div>
+					</article>
+					<article class="universe-card">
+						<div class="card-symbol">03</div>
+						<div>
+							<h3>Desejo</h3>
+							<p>
+								A tensão entre aquilo que se quer, aquilo que se
+								sente e aquilo que se revela.
+							</p>
+						</div>
+					</article>
+				</div>
+			</section>
+			<!-- =================================================
+             COVERS
+        ================================================== -->
+			<section class="covers reveal" id="covers">
+				<div class="covers-content">
+					<div>
+						<div class="label">03 · Reinterpretações</div>
+						<h2 class="title">
+							Não é<br />
+							apenas<br />
+							um cover.
+						</h2>
+					</div>
+					<div>
+						<p class="covers-description">
+							Uma música conhecida pode carregar outra história
+							quando encontra outra voz.
+							<br /><br />
+							Os covers de Mandrakula partem desse lugar:
+							<strong>reinterpretar</strong>. <br /><br />
+							A estética cinematográfica, a emoção crua e a
+							atmosfera do trap transformam cada interpretação em
+							uma experiência diferente.
+						</p>
+						<div class="cover-list">
+							<a
+								href="https://www.youtube.com/channel/UCu354uM_h3xg7lIr7ssnedg"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cover-item"
+							>
+								<span> 01 </span>
+								<span> Ouça as interpretações </span>
+								<span class="cover-arrow"> → </span>
+							</a>
+							<a
+								href="https://www.youtube.com/channel/UCu354uM_h3xg7lIr7ssnedg"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cover-item"
+							>
+								<span> 02 </span>
+								<span> Descubra o universo </span>
+								<span class="cover-arrow"> → </span>
+							</a>
+							<a
+								href="https://www.youtube.com/channel/UCu354uM_h3xg7lIr7ssnedg"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cover-item"
+							>
+								<span> 03 </span>
+								<span> Dar play </span>
+								<span class="cover-arrow"> → </span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- =================================================
+             MANIFESTO
+        ================================================== -->
+			<section class="manifesto reveal">
+				<div class="manifesto-content">
+					<div class="manifesto-small">O conceito</div>
+					<h2>
+						O feitiço começa<br />
+						quando você
+						<span> dá play. </span>
+					</h2>
+				</div>
+			</section>
+			<!-- =================================================
+             A ERA
+        ================================================== -->
+			<section class="era reveal" id="era">
+				<div class="era-grid">
+					<div>
+						<div class="label">04 · A nova era</div>
+						<h2 class="title">
+							Bem-vindo<br />
+							à era.
+						</h2>
+					</div>
+					<div class="era-copy">
+						<p>
+							Toda artista passa por momentos em que começa a
+							entender melhor o que quer dizer.
+						</p>
+						<p>Mandrakula está vivendo justamente esse momento.</p>
+						<p>
+							Uma identidade ainda em construção, mas que já
+							começa a revelar seus elementos: a força do trap, o
+							imaginário da magia, a tensão do desejo e uma
+							maneira própria de transformar emoção em
+							interpretação.
+						</p>
+						<p>
+							Não existe uma fórmula pronta.
+							<br />
+							Existe espaço para experimentar, descobrir e
+							construir.
+						</p>
+						<div class="era-list">
+							<div class="era-line">
+								<span> 01 </span>
+								<span> Nova identidade </span>
+							</div>
+							<div class="era-line">
+								<span> 02 </span>
+								<span> Nova energia </span>
+							</div>
+							<div class="era-line">
+								<span> 03 </span>
+								<span> Nova voz </span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- =================================================
+             REDES
+        ================================================== -->
+			<section class="social reveal" id="redes">
+				<div class="label">05 · Acompanhe</div>
+				<h2 class="title">
+					Entre<br />
+					no universo.
+				</h2>
+				<p class="social-description">
+					A nova fase está apenas começando.
+					<br /><br />
+					Acompanhe Mandrakula, descubra as próximas interpretações e
+					faça parte dessa construção.
+				</p>
+				<div class="social-buttons">
+					<a
+						href="https://www.youtube.com/channel/UCu354uM_h3xg7lIr7ssnedg"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="button primary"
+					>
+						YouTube ↗
+					</a>
+					<a
+						href="https://www.instagram.com/_mandrakula_/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="button"
+					>
+						Instagram ↗
+					</a>
+				</div>
+			</section>
+		</main>
+		<!-- =====================================================
+         FOOTER
+    ====================================================== -->
+		<footer>
+			<strong> MANDRAKULA </strong>
+			<div>Trap · Magia · Desejo</div>
+			<div>© <span id="year"></span></div>
+		</footer>
+		<!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+		<script>
+			/* =====================================================
+           HEADER
+        ===================================================== */
+			const header = document.getElementById("header");
+			window.addEventListener("scroll", () => {
+				if (window.scrollY > 40) {
+					header.classList.add("scrolled");
+				} else {
+					header.classList.remove("scrolled");
+				}
+			});
+			/* =====================================================
+           MENU MOBILE
+        ===================================================== */
+			const menu = document.getElementById("menu");
+			const nav = document.getElementById("nav");
+			menu.addEventListener("click", () => {
+				const active = nav.classList.toggle("active");
+				menu.setAttribute("aria-expanded", active);
+				menu.textContent = active ? "×" : "☰";
+			});
+			document.querySelectorAll("#nav a").forEach((link) => {
+				link.addEventListener("click", () => {
+					nav.classList.remove("active");
+					menu.setAttribute("aria-expanded", "false");
+					menu.textContent = "☰";
+				});
+			});
+			/* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+			const elements = document.querySelectorAll(".reveal");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("visible");
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{
+					threshold: 0.12,
+				}
+			);
+			elements.forEach((element) => {
+				observer.observe(element);
+			});
+			/* =====================================================
+           ANO
+        ===================================================== */
+			document.getElementById("year").textContent =
+				new Date().getFullYear();
+			/* =====================================================
+           SMOOTH SCROLL
+        ===================================================== */
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (event) {
+					const target = document.querySelector(
+						this.getAttribute("href")
+					);
+					if (!target) {
+						return;
+					}
+					event.preventDefault();
+					target.scrollIntoView({
+						behavior: "smooth",
+						block: "start",
+					});
+				});
+			});
+			/* =====================================================
+           EFEITO SUTIL NO HERO
+        ===================================================== */
+			const hero = document.querySelector(".hero");
+			window.addEventListener("mousemove", (event) => {
+				if (window.innerWidth < 850) {
+					return;
+				}
+				const x = (event.clientX / window.innerWidth - 0.5) * 10;
+				const y = (event.clientY / window.innerHeight - 0.5) * 10;
+				hero.style.setProperty("--mouse-x", `${x}px`);
+				hero.style.setProperty("--mouse-y", `${y}px`);
+			});
+		</script>
+	</body>
+</html>
